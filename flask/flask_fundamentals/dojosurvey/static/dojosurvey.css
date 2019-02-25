@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper {
+    width: 250px;
+    height: 280px;
+    background-color: lightgray;
+    margin: 0px auto;
+    padding: 20px;
+}

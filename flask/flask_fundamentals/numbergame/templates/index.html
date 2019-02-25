@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <title>Counter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="header">
+            <br><h1>Welcome to the Great Number Game!</h1><br>
+            <p>I am thinking of a number between 1 and 100</p>
+            <p>Take a guess!</p>
+        </div>
+        <div class="box">
+            <svg width="200" height="200">
+                <circle cx="100" cy="100" r="80" stroke="black" stroke-width="4"  fill="white" />
+                <text action='/result', method='post', x="68", y="100", fill="black">{{session['result']}}</text>
+            </svg>
+        </div>
+        <div class="submission">
+            <form action='/prediction', method='post'>
+                <br><input type="text" name="number"><br>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="startover">
+            <form action='/startover'>
+                <button>Reset</button>
+            </form>
+        </div>
+
+
+
+
+    </div>
+
+
+</body>
+</html>

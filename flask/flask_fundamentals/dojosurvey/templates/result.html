@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel='stylesheet' type='text/css' href="{{ url_for('static',filename='dojosurvey.css') }}">
+	<title>Dojo Survey Success!</title>
+</head>
+<body>
+	<div id=wrapper>
+		<h2><u>Submitted Info:</u></h2>
+		<p>Name: {{name}}</p>
+		<p>Dojo Location: {{dojolocation}}</p>
+		<p>Favorite Language: {{favlanguage}}</p>
+		<p>Comment: {{comment}}</p>
+		<button onclick="goBack()">Go Back</button>
+		<script>
+		function goBack() {
+  			window.history.back();
+		}
+		</script>
+	</div>
+</body>
